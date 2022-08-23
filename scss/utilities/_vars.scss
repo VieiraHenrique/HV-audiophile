@@ -1,18 +1,25 @@
 /* FONTS */
 
-$font-primary: sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;500;600&display=swap");
+
+$font-primary: "Manrope", sans-serif;
 $font-secondary: serif;
 
 /* COLORS */
 
 $white: #fff;
 $black: #000;
-$grey: #999;
+$grey: #c4c4c4;
+$grey-light: #f1f1f1;
+$grey-dark: #888888;
+$orange: #d87d4a;
+$orange-light: #fbaf85;
 
 // BREAKPOINTS
 
 $ipad: 768px;
 $ipadPro: 1024px;
+$design-container: 1110px;
 $laptop13: 1280px;
 $laptop: 1440px;
 $pc: 1920px;

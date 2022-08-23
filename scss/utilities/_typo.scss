@@ -1,25 +1,30 @@
 .title-main {
-    font-size: 5rem;
+    font-size: 3.6rem;
+    text-transform: uppercase;
+    font-weight: bold;
+
+    @include ipad {
+        font-size: 5.6rem;
+    }
 }
 
 .title-secondary {
-    font-size: 4rem;
+    font-size: 3.6rem;
+    text-transform: uppercase;
+    font-weight: bold;
+
+    @include ipad {
+        font-size: 4rem;
+    }
 }
 
-.title-small {
-    font-size: 2.4rem;
-}
-
-.title-small-extra {
-    font-size: 1.6rem;
-}
-
-.suptitle {
-    font-size: 1rem;
-}
-
-.subtitle {
-    font-size: 1.4rem;
+.title-tertiary {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    @include laptop13 {
+        font-size: 2.8rem;
+    }
 }
 
 .lead {
@@ -32,7 +37,7 @@ a,
 button,
 textarea,
 span {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
 }
 
 .paragraph {

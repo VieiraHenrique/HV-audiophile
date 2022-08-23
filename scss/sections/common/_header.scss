@@ -1,0 +1,105 @@
+.header {
+    @include container;
+    height: 95px;
+    position: fixed;
+    width: 100vw;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    background-color: $black;
+
+    @include pc {
+        @include container($laptop);
+    }
+
+    > .wrapper {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid $grey-dark;
+        background-color: $black;
+    }
+
+    .hamburger {
+        @include laptop13 {
+            display: none;
+        }
+    }
+
+    &__logo {
+        max-width: 145px;
+    }
+
+    &__nav {
+        display: none;
+        @include laptop13 {
+            display: block;
+        }
+        .nav-list {
+            display: flex;
+            align-items: center;
+        }
+        .nav-item {
+            @include gap-horizontal(35px);
+            a {
+                color: $white;
+                text-transform: uppercase;
+                @include transition;
+                &:hover {
+                    color: $orange;
+                }
+            }
+        }
+    }
+
+    .menu-mobile {
+        position: fixed;
+        left: 0%;
+        top: 95px;
+        width: 100vw;
+        height: 100%;
+        background-color: $white;
+        @include container;
+        overflow-y: scroll;
+        padding-top: 80px;
+        padding-bottom: 160px;
+        @include transition;
+        z-index: -1;
+        transform: scaleY(0);
+        transform-origin: top;
+
+        @include ipad {
+            height: auto;
+            padding-bottom: 80px;
+        }
+
+        @include laptop13 {
+            display: none;
+        }
+
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+
+            @include ipad {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 30px;
+            }
+        }
+
+        .card {
+            @include gap-vertical(70px);
+            @include ipad {
+                margin-bottom: 0;
+            }
+        }
+
+        &.opened {
+            left: 0;
+            transform: scale(1);
+        }
+    }
+}

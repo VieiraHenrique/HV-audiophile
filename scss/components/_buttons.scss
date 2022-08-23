@@ -1,5 +1,57 @@
 .btn {
     display: inline-block;
-    padding: 1.5rem 2.5rem;
+    padding: 2rem 3rem;
     @include transition;
+    text-transform: uppercase;
+
+    &--orange {
+        background-color: $orange;
+        color: $white;
+        &:hover {
+            background-color: $orange-light;
+        }
+    }
+
+    &--black {
+        background-color: $black;
+        color: $white;
+        &:hover {
+            background-color: $grey-dark;
+        }
+    }
+
+    &--outline {
+        background-color: transparent;
+        border: 2px solid $black;
+        color: $black;
+
+        &:hover {
+            background-color: $black;
+        }
+    }
+
+    &--arrow {
+        padding: unset;
+        color: $grey-dark;
+        position: relative;
+        &::after {
+            @include pseudo;
+            @include transition;
+            width: 10px;
+            height: 10px;
+            background-image: url("../../img/arrow-right.svg");
+            background-repeat: no-repeat;
+            background-size: contain;
+            right: -15px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        &:hover {
+            color: $black;
+
+            &::after {
+                right: -20px;
+            }
+        }
+    }
 }

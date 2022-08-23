@@ -1,0 +1,21 @@
+.card {
+    width: 100%;
+    padding: 75px 10% 50px;
+    background-color: $grey-light;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 7px;
+
+    &__cover {
+        position: absolute;
+        top: -50px;
+        max-height: 100px
+    }
+
+    &__title {
+        @extend .title-tertiary;
+    }
+}

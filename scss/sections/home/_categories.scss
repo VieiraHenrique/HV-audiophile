@@ -8,13 +8,13 @@
         flex-direction: column;
         grid-column: 2/-2;
 
-        @include laptop13 {
+        @include ipad {
             flex-direction: row;
         }
 
         .card {
             @include gap-vertical(50px);
-            @include laptop13 {
+            @include ipad {
                 margin-right: 0;
                 @include gap-horizontal(50px);
             }

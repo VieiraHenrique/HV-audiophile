@@ -1,0 +1,60 @@
+.about {
+    @include container;
+    padding: 50px 0;
+    .wrapper {
+        display: grid;
+        @include ipad {
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            align-items: center;
+        }
+    }
+
+    .text-block {
+        padding: 15% 5%;
+
+        @include ipad {
+            grid-column: 1/2;
+            grid-row: 1;
+        }
+
+        @include laptop13 {
+            max-width: 80%;
+        }
+
+        &__title {
+            color: $black;
+
+            span {
+                color: $orange;
+            }
+        }
+        &__content {
+            p {
+                color: $black;
+                font-weight: 200;
+            }
+        }
+    }
+
+    &-cover {
+        @include ipad {
+            grid-column: 2/3;
+            grid-row: 1;
+        }
+        img {
+            border-radius: $border-radius;
+            display: block;
+            object-fit: cover;
+            height: 38rem;
+
+            @include ipad {
+                height: 48rem;
+            }
+
+            @include laptop13 {
+                height: 59rem;
+            }
+        }
+    }
+}

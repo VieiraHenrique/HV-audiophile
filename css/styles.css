@@ -13,12 +13,12 @@
       font-size: 5.6rem; } }
 
 .title-secondary {
-  font-size: 3.6rem;
+  font-size: 3rem;
   text-transform: uppercase;
   font-weight: bold; }
   @media screen and (min-width: 768px) {
     .title-secondary {
-      font-size: 4rem; } }
+      font-size: 3.6rem; } }
 
 .title-tertiary, .card__title {
   font-size: 1.5rem;
@@ -660,6 +660,12 @@ span {
 html {
   scroll-behavior: smooth;
   font-size: 62.5%; }
+  @media screen and (min-width: 1280px) {
+    html {
+      font-size: 57%; } }
+  @media screen and (min-width: 1440px) {
+    html {
+      font-size: 62.5%; } }
   @media screen and (min-width: 1920px) {
     html {
       font-size: 80%; } }
@@ -743,7 +749,8 @@ button {
     border: 2px solid #000;
     color: #000; }
     .btn--outline:hover {
-      background-color: #000; }
+      background-color: #000;
+      color: #fff; }
   .btn--arrow {
     padding: unset;
     color: #888888;
@@ -807,7 +814,7 @@ button {
 
 .header {
   display: grid;
-  grid-template-columns: [full-start] minmax(11.5vw, 1fr) [container-start] repeat(12, [col-start] minmax(11px, 120px) [col-end]) [container-end] minmax(11.5vw, 1fr) [full-end];
+  grid-template-columns: [full-start] minmax(5vw, 1fr) [container-start] repeat(12, [col-start] minmax(11px, 120px) [col-end]) [container-end] minmax(5vw, 1fr) [full-end];
   height: 95px;
   position: fixed;
   width: 100vw;
@@ -818,6 +825,9 @@ button {
   .header > * {
     grid-column: container-start / container-end;
     grid-row: 1; }
+  @media screen and (min-width: 1280px) {
+    .header {
+      grid-template-columns: [full-start] minmax(11.5vw, 1fr) [container-start] repeat(12, [col-start] minmax(11px, 120px) [col-end]) [container-end] minmax(11.5vw, 1fr) [full-end]; } }
   .header > .wrapper {
     height: 100%;
     display: flex;
@@ -856,7 +866,7 @@ button {
     height: 100%;
     background-color: #fff;
     display: grid;
-    grid-template-columns: [full-start] minmax(11.5vw, 1fr) [container-start] repeat(12, [col-start] minmax(11px, 120px) [col-end]) [container-end] minmax(11.5vw, 1fr) [full-end];
+    grid-template-columns: [full-start] minmax(5vw, 1fr) [container-start] repeat(12, [col-start] minmax(11px, 120px) [col-end]) [container-end] minmax(5vw, 1fr) [full-end];
     overflow-y: scroll;
     padding-top: 30px;
     padding-bottom: 160px;
@@ -867,6 +877,9 @@ button {
     .header .menu-mobile > * {
       grid-column: container-start / container-end;
       grid-row: 1; }
+    @media screen and (min-width: 1280px) {
+      .header .menu-mobile {
+        grid-template-columns: [full-start] minmax(11.5vw, 1fr) [container-start] repeat(12, [col-start] minmax(11px, 120px) [col-end]) [container-end] minmax(11.5vw, 1fr) [full-end]; } }
     @media screen and (min-width: 768px) {
       .header .menu-mobile {
         height: auto;
@@ -898,6 +911,55 @@ button {
   height: 65px;
   background-color: #141414; }
 
+.about {
+  display: grid;
+  grid-template-columns: [full-start] minmax(5vw, 1fr) [container-start] repeat(12, [col-start] minmax(11px, 120px) [col-end]) [container-end] minmax(5vw, 1fr) [full-end];
+  padding: 50px 0; }
+  .about > * {
+    grid-column: container-start / container-end;
+    grid-row: 1; }
+  @media screen and (min-width: 1280px) {
+    .about {
+      grid-template-columns: [full-start] minmax(11.5vw, 1fr) [container-start] repeat(12, [col-start] minmax(11px, 120px) [col-end]) [container-end] minmax(11.5vw, 1fr) [full-end]; } }
+  .about .wrapper {
+    display: grid; }
+    @media screen and (min-width: 768px) {
+      .about .wrapper {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        align-items: center; } }
+  .about .text-block {
+    padding: 15% 5%; }
+    @media screen and (min-width: 768px) {
+      .about .text-block {
+        grid-column: 1/2;
+        grid-row: 1; } }
+    @media screen and (min-width: 1280px) {
+      .about .text-block {
+        max-width: 80%; } }
+    .about .text-block__title {
+      color: #000; }
+      .about .text-block__title span {
+        color: #d87d4a; }
+    .about .text-block__content p {
+      color: #000;
+      font-weight: 200; }
+  @media screen and (min-width: 768px) {
+    .about-cover {
+      grid-column: 2/3;
+      grid-row: 1; } }
+  .about-cover img {
+    border-radius: 8px;
+    display: block;
+    object-fit: cover;
+    height: 38rem; }
+    @media screen and (min-width: 768px) {
+      .about-cover img {
+        height: 48rem; } }
+    @media screen and (min-width: 1280px) {
+      .about-cover img {
+        height: 59rem; } }
+
 .hero {
   background-color: #141414;
   height: 100vh;
@@ -906,10 +968,13 @@ button {
   padding-top: 45px;
   overflow: hidden;
   display: grid;
-  grid-template-columns: [full-start] minmax(11.5vw, 1fr) [container-start] repeat(12, [col-start] minmax(11px, 120px) [col-end]) [container-end] minmax(11.5vw, 1fr) [full-end]; }
+  grid-template-columns: [full-start] minmax(5vw, 1fr) [container-start] repeat(12, [col-start] minmax(11px, 120px) [col-end]) [container-end] minmax(5vw, 1fr) [full-end]; }
   .hero > * {
     grid-column: container-start / container-end;
     grid-row: 1; }
+  @media screen and (min-width: 1280px) {
+    .hero {
+      grid-template-columns: [full-start] minmax(11.5vw, 1fr) [container-start] repeat(12, [col-start] minmax(11px, 120px) [col-end]) [container-end] minmax(11.5vw, 1fr) [full-end]; } }
   .hero .text-block {
     z-index: 1; }
     @media screen and (min-width: 768px) {
@@ -931,24 +996,27 @@ button {
 
 .categories {
   display: grid;
-  grid-template-columns: [full-start] minmax(11.5vw, 1fr) [container-start] repeat(12, [col-start] minmax(11px, 120px) [col-end]) [container-end] minmax(11.5vw, 1fr) [full-end];
+  grid-template-columns: [full-start] minmax(5vw, 1fr) [container-start] repeat(12, [col-start] minmax(11px, 120px) [col-end]) [container-end] minmax(5vw, 1fr) [full-end];
   padding-top: 50px; }
   .categories > * {
     grid-column: container-start / container-end;
     grid-row: 1; }
+  @media screen and (min-width: 1280px) {
+    .categories {
+      grid-template-columns: [full-start] minmax(11.5vw, 1fr) [container-start] repeat(12, [col-start] minmax(11px, 120px) [col-end]) [container-end] minmax(11.5vw, 1fr) [full-end]; } }
   .categories .wrapper {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
     grid-column: 2/-2; }
-    @media screen and (min-width: 1280px) {
+    @media screen and (min-width: 768px) {
       .categories .wrapper {
         flex-direction: row; } }
     .categories .wrapper .card {
       margin-bottom: 50px; }
       .categories .wrapper .card:last-child {
         margin-bottom: 0; }
-      @media screen and (min-width: 1280px) {
+      @media screen and (min-width: 768px) {
         .categories .wrapper .card {
           margin-right: 0;
           margin-right: 50px; }
@@ -957,11 +1025,18 @@ button {
 
 .products-presentation {
   display: grid;
-  grid-template-columns: [full-start] minmax(11.5vw, 1fr) [container-start] repeat(12, [col-start] minmax(11px, 120px) [col-end]) [container-end] minmax(11.5vw, 1fr) [full-end];
-  row-gap: 30px; }
+  grid-template-columns: [full-start] minmax(5vw, 1fr) [container-start] repeat(12, [col-start] minmax(11px, 120px) [col-end]) [container-end] minmax(5vw, 1fr) [full-end];
+  row-gap: 30px;
+  padding-top: 50px; }
   .products-presentation > * {
     grid-column: container-start / container-end;
     grid-row: 1; }
+  @media screen and (min-width: 1280px) {
+    .products-presentation {
+      grid-template-columns: [full-start] minmax(11.5vw, 1fr) [container-start] repeat(12, [col-start] minmax(11px, 120px) [col-end]) [container-end] minmax(11.5vw, 1fr) [full-end]; } }
+  @media screen and (min-width: 1280px) {
+    .products-presentation {
+      padding-bottom: 100px; } }
   .products-presentation__main {
     grid-column: 2/-2;
     grid-row: 1;
@@ -970,16 +1045,25 @@ button {
     background-repeat: no-repeat;
     background-position: top left -200px;
     border-radius: 8px;
-    overflow: hidden; }
+    overflow: hidden;
+    padding: 5%; }
+    @media screen and (min-width: 1280px) {
+      .products-presentation__main {
+        padding: 0; } }
     .products-presentation__main .wrapper {
       display: grid;
-      grid-template-columns: 1fr 1fr;
       gap: 20px;
       place-items: center;
       padding: 3%; }
+      @media screen and (min-width: 1280px) {
+        .products-presentation__main .wrapper {
+          grid-template-columns: 1fr 1fr; } }
     .products-presentation__main img {
-      max-width: 370px;
-      transform: translateY(110px); }
+      max-width: 200px; }
+      @media screen and (min-width: 1280px) {
+        .products-presentation__main img {
+          max-width: 370px;
+          transform: translateY(110px); } }
       @media screen and (min-width: 1440px) {
         .products-presentation__main img {
           max-width: 400px; } }
@@ -997,11 +1081,18 @@ button {
     grid-column: 2/-2;
     grid-row: 2;
     background-image: url("../../../img/speaker-zx7.png");
-    background-position: right bottom;
-    background-size: cover;
+    background-position: right -230px bottom -40px;
+    background-size: 200%;
     background-repeat: no-repeat;
     padding: 10%;
-    border-radius: 8px; }
+    border-radius: 8px;
+    min-height: 235px; }
+    @media screen and (min-width: 768px) {
+      .products-presentation__full {
+        background-size: cover;
+        background-position: right bottom; } }
+    .products-presentation__full .text-block {
+      text-align: left; }
     .products-presentation__full .text-block__title {
       color: #000; }
   .products-presentation__2columns {
@@ -1009,5 +1100,24 @@ button {
     grid-row: 3; }
     .products-presentation__2columns .wrapper {
       display: grid;
-      grid-template-columns: 1fr 1fr;
       gap: 20px; }
+      @media screen and (min-width: 768px) {
+        .products-presentation__2columns .wrapper {
+          grid-template-columns: 1fr 1fr; } }
+    .products-presentation__2columns img {
+      height: 100%;
+      max-height: 235px;
+      object-fit: cover;
+      border-radius: 8px; }
+      @media screen and (min-width: 768px) {
+        .products-presentation__2columns img {
+          max-height: 350px; } }
+    .products-presentation__2columns .text-block {
+      background-color: #f1f1f1;
+      border-radius: 8px;
+      padding: 15%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center; }
+      .products-presentation__2columns .text-block__title {
+        color: #000; }

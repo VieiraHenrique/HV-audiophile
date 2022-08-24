@@ -11,7 +11,17 @@
 
 html {
     scroll-behavior: smooth;
+
     font-size: 62.5%;
+
+    @include laptop13 {
+        font-size: 57%;
+    }
+
+    @include laptop {
+        font-size: 62.5%;
+    }
+
     @include pc {
         font-size: 80%;
     }

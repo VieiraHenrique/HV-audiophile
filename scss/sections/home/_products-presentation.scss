@@ -1,6 +1,11 @@
 .products-presentation {
     @include container;
     row-gap: 30px;
+    padding-top: 50px;
+
+    @include laptop13 {
+        padding-bottom: 100px;
+    }
 
     &__main {
         grid-column: 2/-2;
@@ -9,19 +14,32 @@
         background-image: url("../../../img/circles.svg");
         background-repeat: no-repeat;
         background-position: top left -200px;
-        border-radius: 8px;
+        border-radius: $border-radius;
         overflow: hidden;
+        padding: 5%;
+
+        @include laptop13 {
+            padding: 0;
+        }
+
         .wrapper {
             display: grid;
-            grid-template-columns: 1fr 1fr;
             gap: 20px;
             place-items: center;
             padding: 3%;
+
+            @include laptop13 {
+                grid-template-columns: 1fr 1fr;
+            }
         }
 
         img {
-            max-width: 370px;
-            transform: translateY(110px);
+            max-width: 200px;
+
+            @include laptop13 {
+                max-width: 370px;
+                transform: translateY(110px);
+            }
 
             @include laptop {
                 max-width: 400px;
@@ -51,11 +69,21 @@
         grid-column: 2/-2;
         grid-row: 2;
         background-image: url("../../../img/speaker-zx7.png");
-        background-position: right bottom;
-        background-size: cover;
+        background-position: right -230px bottom -40px;
+        background-size: 200%;
         background-repeat: no-repeat;
         padding: 10%;
-        border-radius: 8px;
+        border-radius: $border-radius;
+        min-height: 235px;
+
+        @include ipad {
+            background-size: cover;
+            background-position: right bottom;
+        }
+
+        .text-block {
+            text-align: left;
+        }
 
         .text-block__title {
             color: $black;
@@ -67,8 +95,33 @@
         grid-row: 3;
         .wrapper {
             display: grid;
-            grid-template-columns: 1fr 1fr;
             gap: 20px;
+            @include ipad {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        img {
+            height: 100%;
+            max-height: 235px;
+            object-fit: cover;
+            border-radius: $border-radius;
+            @include ipad {
+                max-height: 350px;
+            }
+        }
+
+        .text-block {
+            background-color: $grey-light;
+            border-radius: $border-radius;
+            padding: 15%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            &__title {
+                color: $black;
+            }
         }
     }
 }

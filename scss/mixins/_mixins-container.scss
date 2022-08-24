@@ -1,4 +1,4 @@
-@mixin container($max-width: $pc) {
+@mixin container($max-width: $laptop) {
     display: grid;
     grid-template-columns:
         [full-start] minmax(11.5vw, 1fr) [container-start] repeat(12, [col-start] minmax(11px, $max-width / 12) [col-end])

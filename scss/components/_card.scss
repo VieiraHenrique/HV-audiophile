@@ -1,6 +1,8 @@
 .card {
     width: 100%;
-    padding: 75px 10% 50px;
+    max-width: 450px;
+    @extend .mx-auto;
+    padding: 75px 0 50px;
     background-color: $grey-light;
     display: flex;
     flex-direction: column;
@@ -8,11 +10,12 @@
     align-items: center;
     position: relative;
     border-radius: 7px;
+    margin-top: 50px;
 
     &__cover {
         position: absolute;
         top: -50px;
-        max-height: 100px
+        max-height: 100px;
     }
 
     &__title {

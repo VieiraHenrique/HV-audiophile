@@ -1,4 +1,38 @@
 .hero {
-    background-color: $black;
-    min-height: 100vh;
+    background-color: $bg-black;
+    height: 100vh;
+    max-height: 1080px;
+    align-items: center;
+    overflow: hidden;
+    @include container;
+
+    .text-block {
+        z-index: 1;
+        @include ipad {
+            grid-column: 3/-3;
+        }
+        @include laptop13 {
+            grid-column: 2/6;
+        }
+    }
+
+    .product-image {
+        grid-column: 1/-1;
+        opacity: 0.5;
+
+        @include ipad {
+            grid-column: 2/-2;
+        }
+
+        @include laptop13 {
+            grid-column: 7/-3;
+            opacity: 1;
+        }
+        @include laptop {
+            grid-column: 8/-2;
+        }
+        @include pc {
+            grid-column: 8/-2;
+        }
+    }
 }

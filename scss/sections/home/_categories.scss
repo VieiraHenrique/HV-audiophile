@@ -1,0 +1,23 @@
+.categories {
+    @include container;
+    padding-top: 50px;
+
+    .wrapper {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        grid-column: 2/-2;
+
+        @include laptop13 {
+            flex-direction: row;
+        }
+
+        .card {
+            @include gap-vertical(50px);
+            @include laptop13 {
+                margin-right: 0;
+                @include gap-horizontal(50px);
+            }
+        }
+    }
+}

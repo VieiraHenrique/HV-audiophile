@@ -1,0 +1,74 @@
+.products-presentation {
+    @include container;
+    row-gap: 30px;
+
+    &__main {
+        grid-column: 2/-2;
+        grid-row: 1;
+        background-color: $orange;
+        background-image: url("../../../img/circles.svg");
+        background-repeat: no-repeat;
+        background-position: top left -200px;
+        border-radius: 8px;
+        overflow: hidden;
+        .wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            place-items: center;
+            padding: 3%;
+        }
+
+        img {
+            max-width: 370px;
+            transform: translateY(110px);
+
+            @include laptop {
+                max-width: 400px;
+            }
+
+            @include pc {
+                max-width: 480px;
+            }
+
+            @include bigPc {
+                max-width: 610px;
+            }
+        }
+
+        .text-block {
+            max-width: 70%;
+        }
+
+        .text-block__content {
+            p {
+                color: white;
+            }
+        }
+    }
+
+    &__full {
+        grid-column: 2/-2;
+        grid-row: 2;
+        background-image: url("../../../img/speaker-zx7.png");
+        background-position: right bottom;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 10%;
+        border-radius: 8px;
+
+        .text-block__title {
+            color: $black;
+        }
+    }
+
+    &__2columns {
+        grid-column: 2/-2;
+        grid-row: 3;
+        .wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+    }
+}

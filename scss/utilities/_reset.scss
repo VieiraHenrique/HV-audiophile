@@ -12,11 +12,15 @@
 html {
     scroll-behavior: smooth;
     font-size: 62.5%;
+    @include pc {
+        font-size: 70%;
+    }
 }
 
 body {
     font-family: $font-primary;
     overflow-x: hidden;
+    font-size: 1.6rem;
 }
 
 body::-webkit-scrollbar {

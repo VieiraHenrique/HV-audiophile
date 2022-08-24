@@ -6,11 +6,7 @@
     left: 0;
     top: 0;
     z-index: 999;
-    background-color: $black;
-
-    @include pc {
-        @include container($laptop);
-    }
+    @include transition;
 
     > .wrapper {
         height: 100%;
@@ -18,7 +14,6 @@
         align-items: center;
         justify-content: space-between;
         border-bottom: 1px solid $grey-dark;
-        background-color: $black;
     }
 
     .hamburger {
@@ -35,6 +30,7 @@
         display: none;
         @include laptop13 {
             display: block;
+            margin-right: 10%;
         }
         .nav-list {
             display: flex;
@@ -62,7 +58,7 @@
         background-color: $white;
         @include container;
         overflow-y: scroll;
-        padding-top: 80px;
+        padding-top: 30px;
         padding-bottom: 160px;
         @include transition;
         z-index: -1;
@@ -91,7 +87,7 @@
         }
 
         .card {
-            @include gap-vertical(70px);
+            @include gap-vertical(30px);
             @include ipad {
                 margin-bottom: 0;
             }
@@ -102,4 +98,9 @@
             transform: scale(1);
         }
     }
+}
+
+.small-header {
+    height: 65px;
+    background-color: $bg-black;
 }

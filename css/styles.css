@@ -762,7 +762,7 @@ button {
       transition: 0.4s ease;
       width: 10px;
       height: 10px;
-      background-image: url("../../img/arrow-right.svg");
+      background-image: url("https://vieirahenrique.github.io/HV-audiophile/img/arrow-right.svg");
       background-repeat: no-repeat;
       background-size: contain;
       right: -15px;
@@ -1117,7 +1117,7 @@ button {
     grid-column: 2/-2;
     grid-row: 1;
     background-color: #d87d4a;
-    background-image: url("../../../img/circles.svg");
+    background-image: url("https://vieirahenrique.github.io/HV-audiophile/img/circles.svg");
     background-repeat: no-repeat;
     background-position: top left -200px;
     border-radius: 8px;
@@ -1156,7 +1156,7 @@ button {
   .products-presentation__full {
     grid-column: 2/-2;
     grid-row: 2;
-    background-image: url("../../../img/speaker-zx7.png");
+    background-image: url("https://vieirahenrique.github.io/HV-audiophile/img/speaker-zx7.png");
     background-position: right -230px bottom -40px;
     background-size: 200%;
     background-repeat: no-repeat;

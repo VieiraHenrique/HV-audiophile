@@ -109,6 +109,9 @@
             @include ipad {
                 max-height: 350px;
             }
+            @include pc {
+                max-height: 456px;
+            }
         }
 
         .text-block {

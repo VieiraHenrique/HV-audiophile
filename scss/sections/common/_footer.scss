@@ -1,0 +1,86 @@
+.footer {
+    background-color: $bg-black;
+    @include container;
+
+    &-description {
+        grid-column: 2/-2;
+
+        .logo {
+            max-width: 14.5rem;
+            @extend .mx-auto;
+            margin-bottom: 30px;
+            display: block;
+
+            @include ipad {
+                margin: 0 0 30px;
+            }
+        }
+
+        .paragraph {
+            color: $grey-dark;
+            line-height: 1.6;
+            margin-bottom: 0;
+            text-align: center;
+            @include ipad {
+                text-align: left;
+            }
+        }
+
+        .copy {
+            color: $grey-dark;
+        }
+
+        @include ipad {
+            grid-row: 1;
+            grid-column: 2/7;
+        }
+    }
+
+    &-menu {
+        margin-top: 50px;
+        grid-row: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        gap: 50px;
+
+        @include ipad {
+            margin-top: 0;            gap: 0;
+            align-items: flex-end;
+            grid-column: 8/-2;
+            grid-row: 1;
+        }
+    }
+
+    &-nav {
+        ul {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            @include ipad {
+                flex-direction: row;
+            }
+        }
+        li {
+            @include gap-vertical(30px);
+            @include ipad {
+                margin: 0;
+                @include gap-horizontal(30px);
+            }
+        }
+        li a {
+            color: $white;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+    }
+
+    .social ul {
+        display: flex;
+        li {
+            @include gap-horizontal(20px);
+        }
+    }
+}
